@@ -26,7 +26,7 @@
 					( (typeof _onclick !== 'undefined' && _onclick != '') ? ' onclick="' + _onclick + '"' : '') +
 				'>' +
 					'<span class="indent-' + indent + '"></span>' +
-					$this.text() +
+					$this.html() +
 				'</a>'
 			);
 
