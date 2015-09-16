@@ -19,8 +19,7 @@
 		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
-		<script src="assets/js/post-list.js"></script>
-		<script src="assets/js/demo-content.js"></script>
+		<script src="assets/js/post-content.js"></script>
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -32,8 +31,9 @@
 							<header id="header">
 								<h1>
 									<a href="#" id="logo">
-										新手报到
-										<img src="images/postList.png" style="float:right; margin-top:8px;" class="postList">
+										<img src="images/back.png" style="float:left; margin-top:6px;" width="32" height="32" class="goback">
+										发表新帖
+										
 									</a>
 								</h1>
 								<nav id="nav">
@@ -51,27 +51,33 @@
 						<div class="4u 12u(mobile)">
 
 							<section>
-								<h2>帖子列表</h2>
+								<h2>发表主题:<input type="text" id="keynote" size="12" style="height: 30px; font-size:20px; margin-left: 6px;"></h2>
 								<div>
 									<div class="row">
 										<div class="6u 12u(mobile)">
-											<ul class="link-list">
-												<li><a href="#">Sed neque nisi consequat</a></li>
-												<li><a href="#">Dapibus sed mattis blandit</a></li>
-												<li><a href="#">Quis accumsan lorem</a></li>
-												<li><a href="#">Suspendisse varius ipsum</a></li>
-												<li><a href="#">Eget et amet consequat</a></li>
-											</ul>
+											<div>內容：</div>
+											<div style="margin-top:8px;">
+												<img src="images/ok.png" style="float:left;">
+												<img src="images/image.png" style="float:left;" id="optionImgBtn">
+												<img src="images/phiz.png" style="float:left;" id="optionPhizBtn">
+												<img src="images/link.png" style="float:left;" id="optionLinkBtn">
+												<img src="images/other.png" style="float:left;">
+											</div>
+											<textarea id="keynoteContent" style="width:100%; height: 200px; margin-top:-2px;"></textarea>
+											<div style="display:none;" id="imageList">
+												<img src="images/imageList.png" style="float:left;">
+											</div>
+											<div style="display:none;" id="phizList">
+												<img src="images/phizlist.png" style="float:left; width: 95%;">
+											</div>
+											<div style="display:none;" id="listImg">
+												<img src="images/listImg.png" style="float:left;  width: 95%;">
+											</div>
+
 										</div>
-										<div class="6u 12u(mobile)">
-											<ul class="link-list" id="contentList">
-												<li id="firstItem"><a href="#" onclick="return false;"><img src="images/folder_new.gif">圣安娜开户150-1817-7115</a></li>
-												<li><a href="#" onclick="return false;">Sed neque nisi consequat</a></li>
-												<li><a href="#" onclick="return false;">Eget et amet consequat</a></li>
-												<li><a href="#" onclick="return false;">Dapibus sed mattis blandit</a></li>
-												<li><a href="#" onclick="return false;">Vitae magna sed dolore</a></li>
-											</ul>
-										</div>
+										<footer class="controls">
+											<div id="sendInfo" class="button">发表</div>
+										</footer>
 									</div>
 								</div>
 							</section>

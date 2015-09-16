@@ -30,7 +30,6 @@ function videoList(){
 			var contentArr = $.parseJSON(rs);
 			$.each(contentArr,function(i,v){
 				creatVideoListContent(v.summary, v.content);
-				console.log(i,v);
 			});
 			
 		}

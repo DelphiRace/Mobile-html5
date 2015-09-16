@@ -1,6 +1,6 @@
 <?php
 	header('Access-Control-Allow-Origin: *');
-	$conn = new mysqli("localhost", "root", "root123", 'lbpeixuncom');
+	$conn = new mysqli("localhost", "root", "306DS7", 'lbpeixuncom');
 	$data = null;
 	if($_POST["type"] == 'binbinList'){
 		$strSQL = "SELECT * FROM `yq_portal_article_title` WHERE username = 'libingccmb' and catid = 3 order by dateline DESC limit 0,5";
