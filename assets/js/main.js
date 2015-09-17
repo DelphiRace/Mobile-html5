@@ -73,8 +73,7 @@
 			//optionListBar
 			$(
 					'<div id="optionBar">' +
-						'<img id="homePageBtn" src="images/optionBar-1.png" style="float: left;" width="58" height="38">' +
-						'<img src="images/optionBar.png" style="float: left;"width="260" height="38">' +
+						'<img id="homePageBtn" src="images/optionBar.png" style="float: left;" width="100%">' +
 					'</div>'
 			)
 			.appendTo($body)
