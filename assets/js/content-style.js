@@ -3,7 +3,7 @@ function creatListContent(title, content){
 	str += '<h2>' + title + '</h2>';
 	str += '<p>' + content + '</p>';
 	str += '<footer class="controls">';
-	str += '<a href="#" onclick="return false;" class="button">阅读全文</a>';
+	str += '<a href="page7.html" class="button">阅读全文</a>';
 	str += '</footer>';
 	str += '</section>';
 	str += '</div>';

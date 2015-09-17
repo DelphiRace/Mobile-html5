@@ -23,7 +23,6 @@ $(function(){
 
 function imgListShow(){
 	var btnSet = $("#optionImgBtn").offset();
-	console.log(btnSet);
 	$("#imageList").css({
 		"position": "absolute",
 		"top" : btnSet.top+25,
@@ -33,7 +32,6 @@ function imgListShow(){
 
 function phizListShow(){
 	var btnSet = $("#optionPhizBtn").offset();
-	console.log(btnSet);
 	$("#phizList").css({
 		"position": "absolute",
 		"top" : btnSet.top+25,
@@ -42,7 +40,6 @@ function phizListShow(){
 
 function linkImgShow(){
 	var btnSet = $("#optionLinkBtn").offset();
-	console.log(btnSet);
 	$("#listImg").css({
 		"position": "absolute",
 		"top" : btnSet.top+25,
