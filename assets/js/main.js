@@ -70,7 +70,28 @@
 				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
 					$('#titleBar, #navPanel, #page-wrapper')
 						.css('transition', 'none');
-
+			//optionListBar
+			$(
+					'<div id="optionBar">' +
+						'<img id="homePageBtn" src="images/optionBar-1.png" style="float: left;" width="58" height="38">' +
+						'<img src="images/optionBar.png" style="float: left;"width="260" height="38">' +
+					'</div>'
+			)
+			.appendTo($body)
+			.css({
+				"z-index":"10001",
+				"position": "fixed",
+				"width": "100%",
+				"top": 44,
+				"height": "31px",
+				"text-align": "center"
+			});
+			$("#main").css({
+				"padding-top": "23px"
+			});
+			$("#homePageBtn").on("touchend", function () {
+				location.href = 'page2.html';
+			});
 	});
 
 })(jQuery);

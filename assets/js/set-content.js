@@ -1,18 +1,18 @@
 $(function(){
 	$.ajaxSetup({
-		url:"http://127.0.0.1/api.php",
-		type:"POST",
+		type:"GET",
 		async: false,
 	});
 });
 
 function binbinList(){
 	$.ajax({
-		data: {type:"binbinList"},
+		url: "binbin.json",
 		success: function(rs){
 			//console.log(rs);
 			$("#listContent").html('');
-			var contentArr = $.parseJSON(rs);
+			//var contentArr = $.parseJSON(rs);
+			var contentArr = rs;
 			$.each(contentArr,function(i,v){
 				creatListContent(v.title, v.summary);
 			});
@@ -23,11 +23,12 @@ function binbinList(){
 
 function videoList(){
 	$.ajax({
-		data: {type:"videoList"},
+		url:"video.json",
 		success: function(rs){
 			//console.log(rs);
 			$("#listContent").html('');
-			var contentArr = $.parseJSON(rs);
+			//var contentArr = $.parseJSON(rs);
+			var contentArr = rs;
 			$.each(contentArr,function(i,v){
 				creatVideoListContent(v.summary, v.content);
 			});
