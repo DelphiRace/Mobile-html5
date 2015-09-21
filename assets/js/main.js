@@ -72,9 +72,26 @@
 						.css('transition', 'none');
 			//optionListBar
 			$(
-					'<div id="optionBar">' +
-						'<img id="homePageBtn" src="images/optionBar.png" style="float: left;" width="100%">' +
-					'</div>'
+				'<div id="barAll">' +
+					'<div id="optionBar" style="float: left; width: 16.6%">' +
+						'<img id="homePageBtn" src="images/optionBar-1.png" style="float: left;" width="100%">' +
+					'</div>' +
+					'<div id="optionBar-2" style="float: left; width: 16.6%">' +
+						'<img id="optionBar-2" src="images/optionBar-2.png" style="float: left;" width="100%">' +
+					'</div>' +
+					'<div id="optionBar-3" style="float: left; width: 16.6%">' +
+						'<img id="optionBar-3" src="images/optionBar-3.png" style="float: left;" width="100%">' +
+					'</div>' +
+					'<div id="optionBar-4" style="float: left; width: 16.6%">' +
+						'<img id="optionBar-4" src="images/optionBar-4.png" style="float: left;" width="100%">' +
+					'</div>' +
+					'<div id="optionBar-5" style="float: left; width: 16.6%">' +
+						'<img id="optionBar-5" src="images/optionBar-5.png" style="float: left;" width="100%">' +
+					'</div>' +
+					'<div id="optionBar-6" style="float: left; width: 17%">' +
+						'<img id="optionBar-6" src="images/optionBar-6.png" style="float: left;" width="100%">' +
+					'</div>' +
+				'</div>'
 			)
 			.appendTo($body)
 			.css({
@@ -91,6 +108,22 @@
 			$("#homePageBtn").on("touchend", function () {
 				location.href = 'page2.html';
 			});
+			$("#optionBar-2").on("touchend", function () {
+				location.href = 'optionBar-2.html';
+			});
+			$("#optionBar-3").on("touchend", function () {
+				location.href = 'optionBar-3.html';
+			});
+			$("#optionBar-4").on("touchend", function () {
+				location.href = 'optionBar-4.html';
+			});
+			$("#optionBar-5").on("touchend", function () {
+				location.href = 'optionBar-5.html';
+			});
+			$("#optionBar-6").on("touchend", function () {
+				location.href = 'optionBar-6.html';
+			});
+			
 	});
 
 })(jQuery);
