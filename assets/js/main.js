@@ -42,7 +42,7 @@
 				$(
 					'<div id="titleBar">' +
 						'<a href="#navPanel" class="toggle"></a>' +
-						'<span class="title">' + $('#logo').html() + '</span>' +
+						'<span class="title">中国护理之声</span>' +
 					'</div>'
 				)
 					.appendTo($body);
@@ -73,23 +73,23 @@
 			//optionListBar
 			$(
 				'<div id="barAll">' +
-					'<div id="optionBar" style="float: left; width: 16.6%">' +
-						'<img id="homePageBtn" src="images/optionBar-1.png" style="float: left;" width="100%">' +
+					'<div id="optionBar" style="float: left; width: 15%;">' +
+						'<img id="homePageBtn" src="images/optionBtn.jpg" style="float: left;" width="100%" height="33">' +
 					'</div>' +
-					'<div id="optionBar-2" style="float: left; width: 16.6%">' +
-						'<img id="optionBar-2" src="images/optionBar-2.png" style="float: left;" width="100%">' +
+					'<div id="optionBar-2" style="float: left; width: 17%;">' +
+						'<img id="optionBar-2" src="images/optionBtn-2.jpg" style="float: left;" width="100%" height="33">' +
 					'</div>' +
-					'<div id="optionBar-3" style="float: left; width: 16.6%">' +
-						'<img id="optionBar-3" src="images/optionBar-3.png" style="float: left;" width="100%">' +
+					'<div id="optionBar-3" style="float: left; width: 17%;">' +
+						'<img id="optionBar-3" src="images/optionBtn-3.jpg" style="float: left;" width="100%" height="33">' +
 					'</div>' +
-					'<div id="optionBar-4" style="float: left; width: 16.6%">' +
-						'<img id="optionBar-4" src="images/optionBar-4.png" style="float: left;" width="100%">' +
+					'<div id="optionBar-4" style="float: left; width: 17%;">' +
+						'<img id="optionBar-4" src="images/optionBtn-4.jpg" style="float: left;" width="100%" height="33">' +
 					'</div>' +
-					'<div id="optionBar-5" style="float: left; width: 16.6%">' +
-						'<img id="optionBar-5" src="images/optionBar-5.png" style="float: left;" width="100%">' +
+					'<div id="optionBar-5" style="float: left; width: 17%;">' +
+						'<img id="optionBar-5" src="images/optionBtn-5.jpg" style="float: left;" width="100%" height="33">' +
 					'</div>' +
-					'<div id="optionBar-6" style="float: left; width: 17%">' +
-						'<img id="optionBar-6" src="images/optionBar-6.png" style="float: left;" width="100%">' +
+					'<div id="optionBar-6" style="float: left; width: 16.9%;">' +
+						'<img id="optionBar-6" src="images/optionBtn-6.jpg" style="float: left;" width="100%" height="33">' +
 					'</div>' +
 				'</div>'
 			)
