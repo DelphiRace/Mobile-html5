@@ -4,7 +4,7 @@ $(function(){
 			"z-index":"10001",
 			"position": "fixed",
 			"width": "100%",
-			"top": bodyHeight - 41,
+			"top": bodyHeight - 41 - 33,
 			"height": "41px",
 			"background-color": "#007294",
 			"text-align": "center"
