@@ -147,7 +147,7 @@
 			});
 			var bodyTotalHeight = $(window).height();
 			//optionListBar-bottom
-			$(
+			/*$(
 				'<div id="barAll">' +
 					'<div id="optionBar-7" style="float: left; width: 20%;">' +
 						'<img src="images/optionBtn-7.jpg" style="float: left;" width="100%" height="33">' +
@@ -174,10 +174,42 @@
 				"top": bodyTotalHeight-33,
 				"height": "31px",
 				"text-align": "center"
+			});*/
+			
+			$(
+				'<div id="barLink2">' +
+					'<div id="optionBar-7" style="float: left; width: 20%;padding: 8px;font-size:10px;margin-left:-9px">' +
+						'友情联结' +
+					'</div>' +
+					'<div id="optionBar-8" style="float: left; width: 25%;padding: 8px;font-size:10px;margin-left:-14px">' +
+						'<a href="#" style="color:#fff">广西健康网</a>&nbsp;&nbsp;|' +
+					'</div>' +
+					'<div id="optionBar-8" style="float: left; width: 25%;padding: 8px;font-size:10px; margin-left:-30px">' +
+						'<a href="#" style="color:#fff">奇峰医疗</a>&nbsp;&nbsp;|' +
+					'</div>' +
+					'<div id="optionBar-8" style="float: left; width: 25%;padding: 8px;font-size:10px; margin-left:-36px">' +
+						'<a href="#" style="color:#fff">粤桂高科</a>&nbsp;&nbsp;|' +
+					'</div>' +
+					'<div id="optionBar-8" style="float: left; width: 22%;padding: 8px;font-size:10px; margin-left:-30px">' +
+						'<a href="#" style="color:#fff">护理管理</a>&nbsp;&nbsp;|' +
+					'</div>' +
+					'<div id="optionBar-8" style="float: left; width: 25%;padding: 8px;font-size:10px; margin-left:-30px">' +
+						'<a href="#" style="color:#fff">医院管理</a>&nbsp;&nbsp;|' +
+					'</div>' +
+				'</div>'
+			)
+			.appendTo($body)
+			.css({
+				"z-index":"10001",
+				"position": "fixed",
+				"width": bodyTotalWidth,
+				"top": bodyTotalHeight-31,
+				"height": "31px",
+				"text-align": "center",
+				"background":"#0075bb",
+				"color":"#fff"
 			});
-			$("#optionBar-11").on("touchend", function () {
-				location.href = 'page8.html';
-			});
+			
 	});
 
 })(jQuery);

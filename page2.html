@@ -25,8 +25,8 @@
 			}
 			.small-image-list li{
 				float: left;
-				margin-left: -4%;
-				padding-left: 4px;
+				margin-left: -6%;
+				padding-left: 5%;
 				text-align: center;
 			}
 			ul.small-image-list li {
@@ -50,9 +50,33 @@
 			.homeMenuRight{
 				top:50%
 			}
+			#main section{
+				background: transparent;
+			}
 		</style>
+		<script>
+			var clientHeight = $(window).height();
+			var clientWidth = $(window).width()*0.2;
+			$(function(){
+				$("#footer-wrapper").css({
+					"position": "fixed",
+					"top":clientHeight-100,
+					"z-index": 300,
+					"left":clientWidth
+				});
+				$(".menuListContent").css({
+					"margin-left": "0%"
+				});
+				$(".menuLinks").on("touchend", function () {
+					var href=$(this).prop("href");
+					location.href = href;
+					return false;
+				});
+			});
+			
+		</script>
 	</head>
-	<body>
+	<body style="overflow: hidden">
 		<div id="page-wrapper">
 			<div id="header-wrapper">
 				<div class="container">
@@ -68,27 +92,27 @@
 				</div>
 			</div>
 			<div id="main">
-				<div class="container">
+				<div class="container" id="mainContainer">
 					<!--左右箭號-->
 					<div id="homeMenuLeft" class="homeMenus homeMenuLeft">≣</div>
 					<div id="homeMenuRight" class="homeMenus homeMenuRight">≣</div>
 					<!--第一頁-->
-					<div id="Page0" class="row main-row" data-role="page">
+					<div id="Page0" class="row main-row menuListContent" data-role="page">
 						<!--第一頁第一列-->
 						<div class="4u 12u(mobile)">
 
 							<section>
 								<ul class="small-image-list">
 									<li>
-										<a href="page4.html"><img src="images/news.png" alt="" class="left" /></a>
+										<a href="page4.html" class="menuLinks"><img src="images/news.png" alt="" class="left" /></a>
 										<h4>今日焦点</h4>
 									</li>
 									<li>
-										<a href="page5.html"><img src="images/binbin.png" alt="" class="left" /></a>
+										<a href="page5.html" class="menuLinks"><img src="images/binbin.png" alt="" class="left" /></a>
 										<h4>冰冰专栏</h4>
 									</li>
 									<li>
-										<a href="page6.html"><img src="images/movie.png" alt="" class="left" /></a>
+										<a href="page6.html" class="menuLinks"><img src="images/movie.png" alt="" class="left" /></a>
 										<h4>精选视频</h4>
 									</li>
 								</ul>
@@ -101,15 +125,15 @@
 							<section>
 								<ul class="small-image-list">
 									<li>
-										<a href="page6.html"><img src="images/movie.png" alt="" class="left" /></a>
+										<a href="page6.html" class="menuLinks"><img src="images/movie.png" alt="" class="left" /></a>
 										<h4>精选视频</h4>
 									</li>
 									<li>
-										<a href="page6.html"><img src="images/movie.png" alt="" class="left" /></a>
+										<a href="page6.html" class="menuLinks"><img src="images/movie.png" alt="" class="left" /></a>
 										<h4>精选视频</h4>
 									</li>
 									<li>
-										<a href="page8.html"><img src="images/aug.png" alt="" class="left" /></a>
+										<a href="page8.html" class="menuLinks"><img src="images/aug.png" alt="" class="left" /></a>
 										<h4>掌上论坛</h4>
 									</li>
 								</ul>
@@ -118,18 +142,18 @@
 						</div>
 					</div>
 					<!--第二頁-->
-					<div id="Page1" class="row main-row" data-role="page">
+					<div id="Page1" class="row main-row menuListContent" data-role="page">
 						<!--第二頁第一列-->
 						<div class="4u 12u(mobile)">
 
 							<section>
 								<ul class="small-image-list">
 									<li>
-										<a href="page4.html"><img src="images/news.png" alt="" class="left" /></a>
+										<a href="page4.html" class="menuLinks"><img src="images/news.png" alt="" class="left" /></a>
 										<h4>今日焦点</h4>
 									</li>
 									<li>
-										<a href="page5.html"><img src="images/binbin.png" alt="" class="left" /></a>
+										<a href="page5.html" class="menuLinks"><img src="images/binbin.png" alt="" class="left" /></a>
 										<h4>冰冰专栏</h4>
 									</li>
 								</ul>
@@ -142,11 +166,11 @@
 							<section>
 								<ul class="small-image-list">
 									<li>
-										<a href="page6.html"><img src="images/movie.png" alt="" class="left" /></a>
+										<a href="page6.html" class="menuLinks"><img src="images/movie.png" alt="" class="left" /></a>
 										<h4>精选视频</h4>
 									</li>
 									<li>
-										<a href="page8.html"><img src="images/aug.png" alt="" class="left" /></a>
+										<a href="page8.html" class="menuLinks"><img src="images/aug.png" alt="" class="left" /></a>
 										<h4>掌上论坛</h4>
 									</li>
 								</ul>
