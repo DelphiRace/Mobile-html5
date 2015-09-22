@@ -35,7 +35,7 @@
 					skel.breakpoint('mobile').active
 				);
 			});
-
+			var bodyTotalWidth = $(window).width();
 		// Off-Canvas Navigation.
 
 			// Title Bar.
@@ -46,7 +46,11 @@
 						'<span class="goback"><img src="images/back.png" width="36"></span>'+
 					'</div>'
 				)
-				.appendTo($body);
+				.appendTo($body)
+				.css({
+					"width":bodyTotalWidth,
+					"font-size": 10
+				});
 					
 				$("#titleBar").find(".title")
 				.css({
@@ -86,6 +90,7 @@
 				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
 					$('#titleBar, #navPanel, #page-wrapper')
 						.css('transition', 'none');
+			
 			//optionListBar
 			$(
 				'<div id="barAll">' +
@@ -113,7 +118,7 @@
 			.css({
 				"z-index":"10001",
 				"position": "fixed",
-				"width": "100%",
+				"width": bodyTotalWidth,
 				"top": 44,
 				"height": "31px",
 				"text-align": "center"
@@ -165,7 +170,7 @@
 			.css({
 				"z-index":"10001",
 				"position": "fixed",
-				"width": "100%",
+				"width": bodyTotalWidth,
 				"top": bodyTotalHeight-33,
 				"height": "31px",
 				"text-align": "center"

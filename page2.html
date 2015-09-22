@@ -5,16 +5,52 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link href="assets/css/jquery.mobile.flatui.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.mobile-1.4.5.min.js"></script>
 		<script src="assets/js/get-menu.js"></script>
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/skel-viewport.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/swipe.js"></script>
+		<style>
+			.small-image-list{
+				
+			}
+			.small-image-list li{
+				float: left;
+				margin-left: -4%;
+				padding-left: 4px;
+				text-align: center;
+			}
+			ul.small-image-list li {
+				margin-bottom: 0;
+			}
+			ul.small-image-list li a img{
+				margin-left: 11%;
+			}
+			.main-row{
+				margin-top: 77px;
+			}
+			.homeMenus{
+				width: 30px;
+				position: fixed;
+				z-index: 999999;
+				height: 30px;
+			}
+			.homeMenuLeft{
+				top:50%;
+			}
+			.homeMenuRight{
+				top:50%
+			}
+		</style>
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -22,20 +58,23 @@
 				<div class="container">
 					<div class="row">
 						<div class="12u">
-
 							<header id="header">
 								<h1><a href="#" id="logo">中国护理之声</a></h1>
 								<nav id="nav">
 								</nav>
 							</header>
-
 						</div>
 					</div>
 				</div>
 			</div>
 			<div id="main">
 				<div class="container">
-					<div class="row main-row">
+					<!--左右箭號-->
+					<div id="homeMenuLeft" class="homeMenus homeMenuLeft">≣</div>
+					<div id="homeMenuRight" class="homeMenus homeMenuRight">≣</div>
+					<!--第一頁-->
+					<div id="Page0" class="row main-row" data-role="page">
+						<!--第一頁第一列-->
 						<div class="4u 12u(mobile)">
 
 							<section>
@@ -52,6 +91,23 @@
 										<a href="page6.html"><img src="images/movie.png" alt="" class="left" /></a>
 										<h4>精选视频</h4>
 									</li>
+								</ul>
+							</section>
+
+						</div>
+						<!--第一頁第二列-->
+						<div class="4u 12u(mobile)">
+
+							<section>
+								<ul class="small-image-list">
+									<li>
+										<a href="page6.html"><img src="images/movie.png" alt="" class="left" /></a>
+										<h4>精选视频</h4>
+									</li>
+									<li>
+										<a href="page6.html"><img src="images/movie.png" alt="" class="left" /></a>
+										<h4>精选视频</h4>
+									</li>
 									<li>
 										<a href="page8.html"><img src="images/aug.png" alt="" class="left" /></a>
 										<h4>掌上论坛</h4>
@@ -61,6 +117,44 @@
 
 						</div>
 					</div>
+					<!--第二頁-->
+					<div id="Page1" class="row main-row" data-role="page">
+						<!--第二頁第一列-->
+						<div class="4u 12u(mobile)">
+
+							<section>
+								<ul class="small-image-list">
+									<li>
+										<a href="page4.html"><img src="images/news.png" alt="" class="left" /></a>
+										<h4>今日焦点</h4>
+									</li>
+									<li>
+										<a href="page5.html"><img src="images/binbin.png" alt="" class="left" /></a>
+										<h4>冰冰专栏</h4>
+									</li>
+								</ul>
+							</section>
+
+						</div>
+						<!--第二頁第二列-->
+						<div class="4u 12u(mobile)">
+
+							<section>
+								<ul class="small-image-list">
+									<li>
+										<a href="page6.html"><img src="images/movie.png" alt="" class="left" /></a>
+										<h4>精选视频</h4>
+									</li>
+									<li>
+										<a href="page8.html"><img src="images/aug.png" alt="" class="left" /></a>
+										<h4>掌上论坛</h4>
+									</li>
+								</ul>
+							</section>
+
+						</div>
+					</div>
+					
 				</div>
 			</div>
 			<div id="footer-wrapper">
