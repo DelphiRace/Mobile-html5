@@ -29,7 +29,8 @@ $(document).on('pageinit', '#Page0', function () {
 		idx = idx - 1 < 0 ? pages.length - 1 : idx - 1;
 		$.mobile.changePage('#' + pages[idx], {
 			'transition': 'slide',
-			'reverse': true
+			'reverse': true,
+			'changeHash':false
 		});
 	});
 	var windowWidth = $(window).width();
@@ -39,6 +40,7 @@ $(document).on('pageinit', '#Page0', function () {
 		idx = ++idx % pages.length;
 		$.mobile.changePage('#' + pages[idx], {
 			'transition': 'slide',
+			'changeHash':false
 		});
 	}).css({
 		"left": windowWidth-29

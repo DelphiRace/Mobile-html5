@@ -1699,7 +1699,7 @@
 						text-align: center;
 						line-height: 31px;
 						font-size: 0.8em;
-						width: 50px;
+						width: 32px;
 						height: 35px;
 						border-radius: 5px;
 						box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25), inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5), inset 0px 6px 13px 0px rgba(255, 255, 255, 0.2), 0px 2px 2px 0px rgba(255, 255, 255, 0.1);
@@ -1712,7 +1712,7 @@
 						height: 30px;
 						background: url("images/mobileUI-site-nav-opener-bg.svg");
 						top: 16px;
-						left: 19px;
+						left: 10px;
 					}
 
 					#titleBar .toggle:active:after {

@@ -5,63 +5,207 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link href="assets/css/jquery.mobile.flatui.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="assets/js/get-menu.js"></script>
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/skel-viewport.min.js"></script>
 		<script src="assets/js/util.js"></script>
-		<script src="assets/js/login.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/swipe.js"></script>
+		<style>
+			.small-image-list{
+				
+			}
+			.small-image-list li{
+				float: left;
+				margin-left: -6%;
+				padding-left: 4%;
+				text-align: center;
+			}
+			ul.small-image-list li {
+				margin-bottom: 0;
+			}
+			ul.small-image-list li a img{
+				margin-left: 11%;
+			}
+			.main-row{
+				margin-top: 77px;
+			}
+			.homeMenus{
+				width: 30px;
+				position: fixed;
+				z-index: 999999;
+				height: 30px;
+			}
+			.homeMenuLeft{
+				top:50%;
+			}
+			.homeMenuRight{
+				top:50%
+			}
+			#main section{
+				background: transparent;
+			}
+			.listRows{
+				padding-left: 0px;
+			}
+			.list2{
+				margin-top: -30px;
+			}
+		</style>
+		<script>
+			var clientHeight = $(window).height();
+			var clientWidth = $(window).width()*0.2;
+			$(function(){
+				$("#footer-wrapper").css({
+					"position": "fixed",
+					"top":clientHeight-100,
+					"z-index": 300,
+					"left":clientWidth
+				});
+				$(".menuListContent").css({
+					"margin-left": "0%"
+				});
+				$(".menuLinks").on("touchend", function () {
+					var href=$(this).prop("href");
+					location.href = href;
+					return false;
+				});
+			});
+			
+		</script>
 	</head>
-	<body>
+	<body style="overflow: hidden">
 		<div id="page-wrapper">
 			<div id="header-wrapper">
 				<div class="container">
 					<div class="row">
 						<div class="12u">
-
 							<header id="header">
-								<h1><a href="#" id="logo">登录</a></h1>
+								<h1><a href="#" id="logo">中国护理之声</a></h1>
 								<nav id="nav">
 								</nav>
 							</header>
-
 						</div>
 					</div>
 				</div>
 			</div>
 			<div id="main">
-				<div class="container">
-					<div class="row main-row">
-						<div class="6u 12u(mobile)">
-							<article class="blog-post">
-								<h3><span style="margin-top:2px; margin-right:12px; float:left; "><img src="images/arrows.png" width="20" ></span>登录</h3>
-								<h3 style="border: 1px solid #000; width:265px">
-									<span style="margin-top:2px; margin-right:-39px; float:left; position:relative;">帐号</span>
-									<span><input type="text" id="username" style="border: 0px; height: 25px; margin-bottom:1px; padding-left: 45px; width:98%;"></span>
-								</h3>
-								<h3 style="border: 1px solid #000; width:265px">
-									<span style="margin-top:2px; margin-right:-39px; float:left; position:relative;">密码</span>
-									<span><input type="password" id="password" style="border: 0px; height: 25px; margin-bottom:1px; padding-left: 45px; width:98%;"></span>
-								</h3>
-								<h3 style="border: 1px solid #000; width:265px;height:30px;">
-									<span style="margin-top:2px; margin-right:-59px; float:left; position:relative;">验证码</span>
-									<span style="float:left;"><input type="text" style="border: 0px; height: 25px; margin-bottom:1px; padding-left: 65px; width:70%;"></span>
-									<span style="float:left; position:relative; left: 165px; top:-26px;">
-										<img src="images/login_code.png" width="49">
-										<a href="#" style="font-size:10px;">換一張</a>
-									</span>
-								</h3>
-								<h3 id="errorMsg" style="display:none;"><font color="red">帐号或密码错误</font></h3>
-								<footer class="controls">
-									<a href="#" class="button" onclick="login(); return false;">登录</a>
-								</footer>
-							</article>
+				<div class="container" id="mainContainer">
+					<!--左右箭號-->
+					<div id="homeMenuLeft" class="homeMenus homeMenuLeft">≣</div>
+					<div id="homeMenuRight" class="homeMenus homeMenuRight">≣</div>
+					<!--第一頁-->
+					<div id="Page0" class="row main-row menuListContent" data-role="page">
+						<!--第一頁第一列-->
+						<div class="4u 12u(mobile) listRows">
+
+							<section>
+								<ul class="small-image-list">
+									<li>
+										<a href="page4.html" class="menuLinks"><img src="images/news.png" alt="" class="left" /></a>
+										<h4>今日焦点</h4>
+									</li>
+									<li>
+										<a href="page5.html" class="menuLinks"><img src="images/binbin.png" alt="" class="left" /></a>
+										<h4>冰冰专栏</h4>
+									</li>
+									<li>
+										<a href="page6.html" class="menuLinks"><img src="images/movie.png" alt="" class="left" /></a>
+										<h4>精选视频</h4>
+									</li>
+								</ul>
+							</section>
+
+						</div>
+						<!--第一頁第二列-->
+						<div class="4u 12u(mobile) listRows list2">
+
+							<section>
+								<ul class="small-image-list">
+									<li>
+										<a href="page6.html" class="menuLinks"><img src="images/movie.png" alt="" class="left" /></a>
+										<h4>精选视频</h4>
+									</li>
+									<li>
+										<a href="page6.html" class="menuLinks"><img src="images/movie.png" alt="" class="left" /></a>
+										<h4>精选视频</h4>
+									</li>
+									<li>
+										<a href="page8.html" class="menuLinks"><img src="images/aug.png" alt="" class="left" /></a>
+										<h4>掌上论坛</h4>
+									</li>
+								</ul>
+							</section>
+
+						</div>
+						<!--第一頁第三列-->
+						<div class="4u 12u(mobile) listRows list2">
+
+							<section>
+								<ul class="small-image-list">
+									<li>
+										<a href="page6.html" class="menuLinks"><img src="images/movie.png" alt="" class="left" /></a>
+										<h4>精选视频</h4>
+									</li>
+									<li>
+										<a href="page6.html" class="menuLinks"><img src="images/movie.png" alt="" class="left" /></a>
+										<h4>精选视频</h4>
+									</li>
+									<li>
+										<a href="page8.html" class="menuLinks"><img src="images/aug.png" alt="" class="left" /></a>
+										<h4>掌上论坛</h4>
+									</li>
+								</ul>
+							</section>
 
 						</div>
 					</div>
+					<!--第二頁-->
+					<div id="Page1" class="row main-row menuListContent" data-role="page">
+						<!--第二頁第一列-->
+						<div class="4u 12u(mobile) listRows">
+
+							<section>
+								<ul class="small-image-list">
+									<li>
+										<a href="page4.html" class="menuLinks"><img src="images/news.png" alt="" class="left" /></a>
+										<h4>今日焦点</h4>
+									</li>
+									<li>
+										<a href="page5.html" class="menuLinks"><img src="images/binbin.png" alt="" class="left" /></a>
+										<h4>冰冰专栏</h4>
+									</li>
+								</ul>
+							</section>
+
+						</div>
+						<!--第二頁第二列-->
+						<div class="4u 12u(mobile) listRows list2">
+
+							<section>
+								<ul class="small-image-list">
+									<li>
+										<a href="page6.html" class="menuLinks"><img src="images/movie.png" alt="" class="left" /></a>
+										<h4>精选视频</h4>
+									</li>
+									<li>
+										<a href="page8.html" class="menuLinks"><img src="images/aug.png" alt="" class="left" /></a>
+										<h4>掌上论坛</h4>
+									</li>
+								</ul>
+							</section>
+
+						</div>
+					</div>
+					
 				</div>
 			</div>
 			<div id="footer-wrapper">

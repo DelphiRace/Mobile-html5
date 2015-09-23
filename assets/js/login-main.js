@@ -41,12 +41,13 @@
 			// Title Bar.
 				$(
 					'<div id="titleBar">' +
-						'<span class="title" style="width: 46%;"><img src="images/logos.png" width="100%" height="44"></span>' +
-						'<span class="topLoginBtn" style="width: 19%;"><a href="login.html"><img src="images/loginbtn.png" width="100%" height="44"></a></span>' +
-						'<span class="goback" style="width: 8%;"><img src="images/back.png" width="100%" height="44"></span>' +
-						'<span class="home" style="width: 9%;"><a href="./"><img src="images/home.png" width="100%" height="44"></a></span>' +
-						'<span class="search" style="width: 8%;"><a href="search.html"><img src="images/search.png" width="100%" height="44"></a></span>' +
-						'<span class="notice" style="width: 10%;"><img src="images/notice.png" width="100%" height="44"></span>' +
+						'<a href="#navPanel" class="toggle"></a>' +
+						'<span class="title"><img src="images/logos.png" width="110" height="44"></span>' +
+						'<span class="topLoginBtn"><a href="login.html"><img src="images/loginbtn.png" width="61" height="44"></a></span>' +
+						'<span class="goback"><img src="images/back.png"  height="44"></span>' +
+						'<span class="home"><a href="./"><img src="images/home.png"  height="44"></a></span>' +
+						'<span class="search"><a href="search.html"><img src="images/search.png" height="44"></a></span>' +
+						'<span class="goback"><img src="images/notice.png"  height="44"></span>' +
 					'</div>'
 				)
 				.appendTo($body)
@@ -58,9 +59,10 @@
 				$("#titleBar").find(".title")
 				.css({
 					"float": "left",
+					"margin-left": "37px"
 				});
 				
-				$("#titleBar").find(".goback, .home, .topLoginBtn, .search, .notice")
+				$("#titleBar").find(".goback, .home, .topLoginBtn, .search")
 				.css({
 					"float": "left",
 				});
