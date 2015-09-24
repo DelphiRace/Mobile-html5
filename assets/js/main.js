@@ -37,13 +37,34 @@
 			});
 			var bodyTotalWidth = $(window).width();
 		// Off-Canvas Navigation.
-
+				var loginCookie = $.cookie();
+				var title = 46;
+				var navPanel = '';
+				var loginStr = '<a href="login.html" style="color:#fff;text-decoration:none;">登入</a>';
+				var titleBarMargin = 0;
+				if(Object.size(loginCookie) > 0){
+					title = 34;
+					navPanel = '<a href="#navPanel" class="toggle"></a>';
+					loginStr = loginCookie.name;
+					titleBarMargin = 37;
+				}
+								
+				var urlBar = location.href;
+				var gobackToShow = 'hidden';
+				if(urlBar.indexOf(".html") != -1){
+					gobackToShow = 'visible';
+				}
 			// Title Bar.
 				$(
 					'<div id="titleBar">' +
-						'<span class="title" style="width: 46%;"><img src="images/logos.png" width="100%" height="44"></span>' +
-						'<span class="topLoginBtn" style="width: 19%;"><a href="login.html"><img src="images/loginbtn.png" width="100%" height="44"></a></span>' +
-						'<span class="goback" style="width: 8%;"><img src="images/back.png" width="100%" height="44"></span>' +
+						navPanel +
+						'<span class="title" style="width: '+title+'%;"><img src="images/logos.png" width="100%" height="44"></span>' +
+						//'<span class="topLoginBtn" style="width: 19%;">'+
+						'<span class="topLoginBtn" style="width: 19%; padding-top: 15px; font-size: 15px;">'+
+							//'<a href="login.html"><img src="images/loginbtn.png" width="100%" height="44"></a>'+
+							loginStr +
+						'</span>' +
+						'<span class="goback" style="width: 8%; visibility:'+gobackToShow+';"><img src="images/back.png" width="100%" height="44"></span>' +
 						'<span class="home" style="width: 9%;"><a href="./"><img src="images/home.png" width="100%" height="44"></a></span>' +
 						'<span class="search" style="width: 8%;"><a href="search.html"><img src="images/search.png" width="100%" height="44"></a></span>' +
 						'<span class="notice" style="width: 10%;"><img src="images/notice.png" width="100%" height="44"></span>' +
@@ -58,6 +79,7 @@
 				$("#titleBar").find(".title")
 				.css({
 					"float": "left",
+					"margin-left": titleBarMargin
 				});
 				
 				$("#titleBar").find(".goback, .home, .topLoginBtn, .search, .notice")
@@ -69,7 +91,9 @@
 				});
 				$("#titleBar").find(".goback, .home,.search, .topLoginBtn").find("a").on("touchend", function () {
 					var href=$(this).prop("href");
-					location.href = href;
+					if(href){
+						location.href = href;
+					}
 					return false;
 				});
 				
@@ -102,59 +126,59 @@
 						.css('transition', 'none');
 			
 			//optionListBar
-			$(
-				'<div id="barAll">' +
-					'<div id="optionBar" style="float: left; width: 15%;">' +
-						'<img id="homePageBtn" src="images/optionBtn.jpg" style="float: left;" width="100%" height="33">' +
-					'</div>' +
-					'<div id="optionBar-2" style="float: left; width: 17%;">' +
-						'<img id="optionBar-2" src="images/optionBtn-2.jpg" style="float: left;" width="100%" height="33">' +
-					'</div>' +
-					'<div id="optionBar-3" style="float: left; width: 17%;">' +
-						'<img id="optionBar-3" src="images/optionBtn-3.jpg" style="float: left;" width="100%" height="33">' +
-					'</div>' +
-					'<div id="optionBar-4" style="float: left; width: 17%;">' +
-						'<img id="optionBar-4" src="images/optionBtn-4.jpg" style="float: left;" width="100%" height="33">' +
-					'</div>' +
-					'<div id="optionBar-5" style="float: left; width: 17%;">' +
-						'<img id="optionBar-5" src="images/optionBtn-5.jpg" style="float: left;" width="100%" height="33">' +
-					'</div>' +
-					'<div id="optionBar-6" style="float: left; width: 16.9%;">' +
-						'<img id="optionBar-6" src="images/optionBtn-6.jpg" style="float: left;" width="100%" height="33">' +
-					'</div>' +
-				'</div>'
-			)
-			.appendTo($body)
-			.css({
-				"z-index":"10001",
-				"position": "fixed",
-				"width": bodyTotalWidth,
-				"top": 44,
-				"height": "31px",
-				"text-align": "center"
-			});
+			// $(
+				// '<div id="barAll">' +
+					// '<div id="optionBar" style="float: left; width: 15%;">' +
+						// '<img id="homePageBtn" src="images/optionBtn.jpg" style="float: left;" width="100%" height="33">' +
+					// '</div>' +
+					// '<div id="optionBar-2" style="float: left; width: 17%;">' +
+						// '<img id="optionBar-2" src="images/optionBtn-2.jpg" style="float: left;" width="100%" height="33">' +
+					// '</div>' +
+					// '<div id="optionBar-3" style="float: left; width: 17%;">' +
+						// '<img id="optionBar-3" src="images/optionBtn-3.jpg" style="float: left;" width="100%" height="33">' +
+					// '</div>' +
+					// '<div id="optionBar-4" style="float: left; width: 17%;">' +
+						// '<img id="optionBar-4" src="images/optionBtn-4.jpg" style="float: left;" width="100%" height="33">' +
+					// '</div>' +
+					// '<div id="optionBar-5" style="float: left; width: 17%;">' +
+						// '<img id="optionBar-5" src="images/optionBtn-5.jpg" style="float: left;" width="100%" height="33">' +
+					// '</div>' +
+					// '<div id="optionBar-6" style="float: left; width: 16.9%;">' +
+						// '<img id="optionBar-6" src="images/optionBtn-6.jpg" style="float: left;" width="100%" height="33">' +
+					// '</div>' +
+				// '</div>'
+			// )
+			// .appendTo($body)
+			// .css({
+				// "z-index":"10001",
+				// "position": "fixed",
+				// "width": bodyTotalWidth,
+				// "top": 44,
+				// "height": "31px",
+				// "text-align": "center"
+			// });
 			
-			$("#main").css({
-				"padding-top": "30px"
-			});
-			$("#homePageBtn").on("touchend", function () {
-				location.href = './';
-			});
-			$("#optionBar-2").on("touchend", function () {
-				location.href = 'optionBar-2.html';
-			});
-			$("#optionBar-3").on("touchend", function () {
-				location.href = 'optionBar-3.html';
-			});
-			$("#optionBar-4").on("touchend", function () {
-				location.href = 'optionBar-4.html';
-			});
-			$("#optionBar-5").on("touchend", function () {
-				location.href = 'optionBar-5.html';
-			});
-			$("#optionBar-6").on("touchend", function () {
-				location.href = 'optionBar-6.html';
-			});
+			// $("#main").css({
+				// "padding-top": "30px"
+			// });
+			// $("#homePageBtn").on("touchend", function () {
+				// location.href = './';
+			// });
+			// $("#optionBar-2").on("touchend", function () {
+				// location.href = 'optionBar-2.html';
+			// });
+			// $("#optionBar-3").on("touchend", function () {
+				// location.href = 'optionBar-3.html';
+			// });
+			// $("#optionBar-4").on("touchend", function () {
+				// location.href = 'optionBar-4.html';
+			// });
+			// $("#optionBar-5").on("touchend", function () {
+				// location.href = 'optionBar-5.html';
+			// });
+			// $("#optionBar-6").on("touchend", function () {
+				// location.href = 'optionBar-6.html';
+			// });
 			var bodyTotalHeight = $(window).height();
 			//optionListBar-bottom
 			/*$(
@@ -223,3 +247,14 @@
 	});
 
 })(jQuery);
+
+Object.size = function(obj) {
+    var size = 0, key;
+    for (key in obj) {
+        if (obj.hasOwnProperty(key)) size++;
+    }
+    return size;
+};
+
+// Get the size of an object
+//var size = Object.size(myArray);
