@@ -20,6 +20,68 @@
 		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
+		<script>
+		var pages = 1;
+		$(function(){
+			
+			var bodyHeight = $(window).height();
+			$(
+				'<div class="hmbzlist_ls">' +
+					'<a href="#" id="prePages">←</a>' + 
+					'<a href="optionBar-4.html" class="page1 pagesContent">全部</a>' +
+					'<a href="optionBar-4-1.html" class="page1 pagesContent">培训预告</a>' +
+					'<a href="optionBar-4-2.html" class="page1 pagesContent">会议预告</a>' +
+					'<a href="optionBar-4-3.html" class="page2 pagesContent">培训项目咨询</a>' +
+					'<a href="optionBar-4-4.html" class="page2 pagesContent">培训案例</a>' +
+					'<a href="#" id="nextPages">→</a>' + 
+				'</div>'
+			)
+			.appendTo("body")
+			.css({
+				"z-index":"10001",
+				"position": "fixed",
+				"width": "100%",
+				"top": 43,
+				"height": "23px",
+				"text-align": "center",
+				"background": "rgb(0, 117, 187)"
+			});
+			$(".pagesContent").hide();
+			$(".page"+pages).show();
+			
+			$("#prePages").on("touchend", function () {
+				if(pages > 1){
+					$(".page"+pages).hide();
+					pages = pages-1;
+					$(".page"+pages).show();
+				}
+
+				return false;
+			});
+			$("#nextPages").on("touchend", function () {
+				if(pages <3 ){
+					$(".page"+pages).hide();
+					pages = pages+1;
+					$(".page"+pages).show();
+				}
+				return false;
+			});
+		});
+		
+		</script>
+		
+		<style>
+			.hmbzlist_ls a{
+				background-color: rgb(0, 117, 187);
+				text-decoration: none;
+				margin: 0px 0px 5px 0px;
+				color: #fff;
+				padding: 0px 7px 8px 7px;
+				font-size: 15px;
+				white-space:nowrap;
+				float: left;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -40,6 +102,39 @@
 			<div id="main">
 				<div class="container">
 					<div class="row main-row">
+						<div class="4u 12u(mobile)">
+
+							<section>
+								<h2>[培训预告] 县级医院护理医务礼仪培训方案</h2>
+								<ul class="small-image-list">
+									<li>
+										<p>在我国服务经济的新形势下，医疗服务品质与医疗质量同样成为医院发展的核心竞争力，护理团队是医院开展优质服务，留住患者的先锋团队，培养护士高尚职业修养，卓越的服务技能，是医院提升核心竞争力的有效途径。...</p>
+										<h4>admin 2015-9-11</h4>
+										<footer class="controls">
+											<a href="optionBar-4-content.html" class="button">阅读</a>
+										</footer>
+									</li>
+								</ul>
+							</section>
+
+						</div>
+						<div class="4u 12u(mobile)">
+
+							<section>
+								<h2>[培训项目咨询] 红枫叶养老产业助力夕阳红养老院品牌打造</h2>
+								<ul class="small-image-list">
+									<li>
+										<p>红枫叶养老针对夕阳红养老院打造品牌所制定的《优质服务 精细化管理》咨询项目培训已进入到第二阶段。红枫叶养老培训专家团队（包括优服管理培训专家李冰、台湾养老专家李弘喆、养老运营管理专家周佩云等）已全面进驻夕阳红养老院，针对养老院现有的管理状态及存在问题进行了梳理指导。...</p>
+										<h4>admin 2015-9-11</h4>
+										<footer class="controls">
+											<a href="optionBar-4-content.html" class="button">阅读</a>
+										</footer>
+									</li>
+								</ul>
+							</section>
+
+						</div>
+						
 						<div class="4u 12u(mobile)">
 
 							<section>

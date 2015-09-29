@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<!--
+	Minimaxing by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Two Column 1 - Minimaxing by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.cookie.js"></script>
+		<script src="assets/js/get-menu.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/skel-viewport.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script>
+		var pages = 1;
+		$(function(){
+			
+			var bodyHeight = $(window).height();
+			$(
+				'<div class="hmbzlist_ls">' +
+					'<a href="optionBar-7.html" class="page1 pagesContent">全部</a>' +
+					'<a href="optionBar-7-1.html" class="page1 pagesContent">人才交流</a>' +
+					'<a href="optionBar-7-2.html" class="page1 pagesContent">学术交流</a>' +
+				'</div>'
+			)
+			.appendTo("body")
+			.css({
+				"z-index":"10001",
+				"position": "fixed",
+				"width": "100%",
+				"top": 43,
+				"height": "23px",
+				"text-align": "center",
+				"background": "rgb(0, 117, 187)"
+			});
+			$(".pagesContent").hide();
+			$(".page"+pages).show();
+			
+			$("#prePages").on("touchend", function () {
+				if(pages > 1){
+					$(".page"+pages).hide();
+					pages = pages-1;
+					$(".page"+pages).show();
+				}
+
+				return false;
+			});
+			$("#nextPages").on("touchend", function () {
+				if(pages <3 ){
+					$(".page"+pages).hide();
+					pages = pages+1;
+					$(".page"+pages).show();
+				}
+				return false;
+			});
+		});
+		
+		</script>
+		
+		<style>
+			.hmbzlist_ls a{
+				background-color: rgb(0, 117, 187);
+				text-decoration: none;
+				margin: 0px 0px 5px 0px;
+				color: #fff;
+				padding: 0px 7px 8px 7px;
+				font-size: 15px;
+				white-space:nowrap;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="page-wrapper">
+			<div id="header-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+
+							<header id="header">
+								<h1><a href="#" id="logo">医护管理</a></h1>
+								<nav id="nav"></nav>
+							</header>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="main">
+				<div class="container">
+					<div class="row main-row">
+						<div class="4u 12u(mobile)">
+
+							<section>
+								<h2>[学术交流] 职业发展 | 美国护士也需要修继续教育学分？</h2>
+								<ul class="small-image-list">
+									<li>
+										<p>功能介绍 本刊是由国家卫计委主管、卫生部医管所主办的学术期刊，是中国科技论文统计源期刊、核心期刊。本刊以宣传报道卫生方针政策，推广护理管理科学方法和先进经验，促进护理科研与临床实践相结合，提高我国护理管理水平为宗旨，欢迎各界护理同仁关注我们并交流。...</p>
+										<h4>zhouhaifa 2015-8-19</h4>
+										<footer class="controls">
+											<a href="optionBar-7-content.html" class="button">阅读</a>
+										</footer>
+									</li>
+								</ul>
+							</section>
+
+						</div>					
+						
+					</div>
+				</div>
+			</div>
+			<div id="footer-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+
+							<div id="copyright">
+								&copy; Untitled. All rights reserved.
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

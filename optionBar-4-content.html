@@ -20,6 +20,67 @@
 		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
+		var pages = 1;
+		$(function(){
+			
+			var bodyHeight = $(window).height();
+			$(
+				'<div class="hmbzlist_ls">' +
+					'<a href="#" id="prePages">←</a>' + 
+					'<a href="optionBar-4.html" class="page1 pagesContent">全部</a>' +
+					'<a href="optionBar-4-1.html" class="page1 pagesContent">培训预告</a>' +
+					'<a href="optionBar-4-2.html" class="page1 pagesContent">会议预告</a>' +
+					'<a href="optionBar-4-3.html" class="page2 pagesContent">培训项目咨询</a>' +
+					'<a href="optionBar-4-4.html" class="page2 pagesContent">培训案例</a>' +
+					'<a href="#" id="nextPages">→</a>' + 
+				'</div>'
+			)
+			.appendTo("body")
+			.css({
+				"z-index":"10001",
+				"position": "fixed",
+				"width": "100%",
+				"top": 43,
+				"height": "23px",
+				"text-align": "center",
+				"background": "rgb(0, 117, 187)"
+			});
+			$(".pagesContent").hide();
+			$(".page"+pages).show();
+			
+			$("#prePages").on("touchend", function () {
+				if(pages > 1){
+					$(".page"+pages).hide();
+					pages = pages-1;
+					$(".page"+pages).show();
+				}
+
+				return false;
+			});
+			$("#nextPages").on("touchend", function () {
+				if(pages <3 ){
+					$(".page"+pages).hide();
+					pages = pages+1;
+					$(".page"+pages).show();
+				}
+				return false;
+			});
+		});
+		
+		</script>
+		
+		<style>
+			.hmbzlist_ls a{
+				background-color: rgb(0, 117, 187);
+				text-decoration: none;
+				margin: 0px 0px 5px 0px;
+				color: #fff;
+				padding: 0px 7px 8px 7px;
+				font-size: 15px;
+				white-space:nowrap;
+				float: left;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="page-wrapper">
