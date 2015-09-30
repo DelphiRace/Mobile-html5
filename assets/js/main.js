@@ -43,10 +43,18 @@
 				var loginStr = '<a href="login.html" style="color:#fff;text-decoration:none;">登入</a>';
 				var titleBarMargin = 0;
 				if(Object.size(loginCookie) > 0){
-					title = 34;
-					navPanel = '<a href="#navPanel" class="toggle"></a>';
-					loginStr = loginCookie.name;
-					titleBarMargin = 37;
+					if(typeof loginCookie.name != 'undefined'){
+						title = 34;
+						navPanel = '<a href="#navPanel" class="toggle"></a>';
+						loginStr = loginCookie.name;
+						titleBarMargin = 37;
+					}else{
+						$.each(loginCookie,function(i,v){
+							if(i != 'name' || i != 'user' || i!='title' || i!='content'){
+								$.removeCookie(i, { path: '/' });
+							}
+						});
+					}
 				}
 								
 				var urlBar = location.href;

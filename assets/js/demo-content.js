@@ -16,6 +16,29 @@ $(function(){
 });
 
 function putContent(getArr){
-	var str = '<li><img src="images/folder_new.gif"><a href="#">'+getArr["title"]+'</a></li>';
+	if(typeof $.cookie('name') == 'undefined'){
+		var name = '吴建宏';
+	}else{
+		var name = $.cookie('name')
+	}
+	var d = new Date();
+	var year = d.getFullYear();
+	var month = d.getMonth();
+	var day = d.getDate();
+	var thisDate = year+'-'+month+'-'+day;
+	
+	var str = '<div class="4u 12u(mobile)">';
+	str += '<section>';
+	str += '<h2>'+getArr["title"]+'</h2>';
+	str += '<ul class="small-image-list">';
+	str += '<li>';
+	str += '<p>';
+	str += getArr["content"];
+	str += '</p>';
+	str += '<h4>'+name + '&nbsp;' + thisDate +'</h4>';
+	str += '<footer class="controls"><a href="newuser-content.html" class="button">阅读</a></footer>';
+	str += '</li>';
+	str += '</section>';
+	
 	$("#firstItem").before(str);
 }
